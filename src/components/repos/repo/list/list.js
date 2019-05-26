@@ -1,5 +1,6 @@
 import React from 'react';
 import {parseValue} from '../../../../helper-functions';
+import './list.less';
 
 const List = ({list, repo}) => {
 

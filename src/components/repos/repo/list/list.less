@@ -1,0 +1,13 @@
+@import "../../../../less/variables";
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    li {
+        background: @lightgrey;
+     &:nth-of-type(2n) {
+        background: @darkgrey;
+     }  
+    }
+}

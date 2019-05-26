@@ -1,10 +1,11 @@
 import React from 'react';
 import List from './list/list';
 import {parseFromNow, formatISO} from '../../../helper-functions';
+import './repo.less'
 
 const Repo = ({name, description, owner, pushed_at, list, repo}) => {
 
-    return (<div style={{marginBottom: "10px"}}>
+    return (<div className={"repo"}>
         <div>{name}</div>
         <div><div>Description:</div><div>{description? description:"lacking"}</div></div>
         <List list={list} repo={repo}></List>

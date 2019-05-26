@@ -7,9 +7,9 @@ import Repos from '../components/repos/repos';
 import Userinput from '../components/userinput/user-input';
 import {submit} from '../store/actions';
 import ErrorBoundary from '../components/errorboundary/errorboundary';
-import styles from './App.less';
+import './App.less'
 
-console.log(styles);
+
 
 function App(props) {
 
