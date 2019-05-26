@@ -7,13 +7,16 @@ import Repos from '../components/repos/repos';
 import Userinput from '../components/userinput/user-input';
 import {submit} from '../store/actions';
 import ErrorBoundary from '../components/errorboundary/errorboundary';
+import styles from './App.less';
+
+console.log(styles);
 
 function App(props) {
 
   return (
     <div className="App">
-      <p>https://api.github.com/users/Mostrowski8/repos</p>
-      <p>https://github.com/Mostrowski8/todoapp</p>
+      
+      <p>https://github.com/Mostrowski8/GitHub-API</p>
      <Userinput selectList={props.selectList} url={props.url} submitUrl={()=>props.submitUrl(props.url)} changeUrl={props.changeUrl}></Userinput>
      <hr></hr>
      <ErrorBoundary>
