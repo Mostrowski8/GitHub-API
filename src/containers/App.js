@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import './App.css';
+
 import '../components/repos/repo/repo';
 import '../components/userinput/user-input';
 import Repos from '../components/repos/repos';
