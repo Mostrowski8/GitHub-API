@@ -1,8 +1,24 @@
 @import "../../../less/variables.less";
+@import '../../../less/mixins.less';
 
 .repo {
-    border-radius: 10px;
-    padding: 10px;
-    background: white;
+    .border-radius(5px);
+    border: 1px solid darken(@darkgrey, 20%);
+    
     margin: 20px;
+    
+    .title{
+        background: @darkgrey;
+        .border-radius(5px); 
+        h3 {
+            margin: 0 auto;
+            padding: 5px;
+        }   
+    }
+    .content {
+        background: white;
+        padding: 10px;
+        
+        .border-radius(5px);
+    }
 }

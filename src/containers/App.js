@@ -15,10 +15,10 @@ function App(props) {
 
   return (
     <div className="App">
+      <nav><h1>Get Repo App</h1></nav>
       
-      <p>https://github.com/Mostrowski8/GitHub-API</p>
      <Userinput selectList={props.selectList} url={props.url} submitUrl={()=>props.submitUrl(props.url)} changeUrl={props.changeUrl}></Userinput>
-     <hr></hr>
+     
      <ErrorBoundary>
      <Repos repos={props.repos} list={props.list}/>
      </ErrorBoundary>
