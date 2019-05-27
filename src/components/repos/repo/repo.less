@@ -1,11 +1,15 @@
 @import "../../../less/variables.less";
 @import '../../../less/mixins.less';
+@import "../../../less/rwd";
 
 .repo {
+    .label {
+        font-weight: bolder;
+    }
     .border-radius(5px);
     border: 1px solid darken(@darkgrey, 20%);
-    
-    margin: 20px;
+    max-width: 600px;
+    margin: 20px auto;
     
     .title{
         background: @darkgrey;

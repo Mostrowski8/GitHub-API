@@ -3,6 +3,7 @@ import axios from 'axios';
 export const ADD = 'ADD';
 export const CHANGE = "CHANGE";
 export const SELECT_LIST = "SELECT_LIST";
+export const THROW_ERROR = "THROW_ERROR";
 
 export const passdata = (data) => {
     return {

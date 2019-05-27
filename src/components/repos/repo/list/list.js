@@ -7,6 +7,8 @@ const List = ({list, repo}) => {
 
 
     return (
+        <div className={"itemsList"}>
+            <h4>Items list</h4>
        <ul>
             {list[0]!=="none" && <li>{list[0]}: {parseValue(repo[list[0]])}</li>}
             {list[1]!=="none" && <li>{list[1]}: {parseValue(repo[list[1]])}</li>}
@@ -14,7 +16,7 @@ const List = ({list, repo}) => {
             {list[3]!=="none" && <li>{list[3]}: {parseValue(repo[list[3]])}</li>}
             {list[4]!=="none" && <li>{list[4]}: {parseValue(repo[list[4]])}</li>}
         </ul>
-        
+        </div>  
     )
 }
 

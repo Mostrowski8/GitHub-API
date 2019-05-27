@@ -18,10 +18,8 @@ function App(props) {
       <nav><h1>Get Repo App</h1></nav>
       
      <Userinput selectList={props.selectList} url={props.url} submitUrl={()=>props.submitUrl(props.url)} changeUrl={props.changeUrl}></Userinput>
-     
-     <ErrorBoundary>
+
      <Repos repos={props.repos} list={props.list}/>
-     </ErrorBoundary>
     </div>
   );
 }

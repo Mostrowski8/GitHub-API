@@ -1,4 +1,5 @@
 const initialState = {
+    errorType: null,
     userRepos: [],
     list: {
         0: "none",
@@ -7,7 +8,7 @@ const initialState = {
         3: "none",
         4: "none"
     },
-    url: ""
+    url: "https://github.com/Mostrowski8/GitHub-API"
 }
 
 const reducer = (state = initialState, action) => {
@@ -19,13 +20,27 @@ const reducer = (state = initialState, action) => {
                 url: action.payload
             }
             case "ADD":
+                
                 let newRepo = action.payload;
+                let clearRepos = state.userRepos.filter((repo) => {
+                    return repo.owner.login !== "error"
+                    });
+                    
+                if (newRepo instanceof Error) {
+                    console.log("MATCHED")
+                    let newRepo = {id:0, owner:{login: "error"} };
+                    return {
+                        ...state,
+                        errorType: action.payload,
+                        userRepos: [...clearRepos, newRepo]
+                    }
+                }
 
-                let duplicate = state.userRepos.find((repo) => {
+                let duplicate = clearRepos.find((repo) => {
                     return repo.id === newRepo.id
                 });
                 if (duplicate) {
-                    let newRepos = state.userRepos.map((repo) => {
+                    let newRepos = clearRepos.map((repo) => {
                         if (repo.id === newRepo.id) {
                             return newRepo;
                         }
@@ -33,21 +48,23 @@ const reducer = (state = initialState, action) => {
                     })
                     return {
                         ...state,
-                        userRepos: newRepos
+                        userRepos: newRepos,
+                        errorType: null
                     }
                 }
 
                 return {
                     ...state,
-                    userRepos: [...state.userRepos, newRepo]
+                    userRepos: [...clearRepos, newRepo],
+                    errorType: null
                 }
                 case "SELECT_LIST":
                     return {
                         ...state,
                         list: {...state.list, [action.payload.index]:action.payload.value}
                     }
-                    default:
-                        return {
+                default:
+                    return {
                             ...state
                         }
     }

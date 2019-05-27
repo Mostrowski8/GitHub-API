@@ -1,13 +1,26 @@
 @import "../../../../less/variables";
+@import '../../../../less/mixins';
 
-ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    li {
-        background: @lightgrey;
-     &:nth-of-type(2n) {
-        background: @darkgrey;
-     }  
+
+.itemsList {
+    
+    h4 {
+        margin-bottom: 0;
+        padding: 0;
+    }
+    ul {
+        .border-radius(5px); 
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        max-width: 400px;
+        margin: 5px auto 10px;
+        border: 1px solid transparent;
+        li {
+            background: @lightgrey;
+         &:nth-of-type(2n) {
+            background: @darkgrey;
+         }  
+        }
     }
 }
