@@ -11,8 +11,8 @@ const Userinput = ({changeUrl, submitUrl, url, selectList}) => {
             <h2>Paste url below</h2>
             <input value={url} type="text" onChange={(e)=>changeUrl(e.target.value)}></input>
             <button onClick={submitUrl}>ADD REPO</button>
-            <div>
             <h2>List creator</h2>
+            <div className={"row inputscontainer"}>
             <ListCreator index={0} selectList={selectList}></ListCreator>
             <ListCreator index={1} selectList={selectList}></ListCreator>
             <ListCreator index={2} selectList={selectList}></ListCreator>

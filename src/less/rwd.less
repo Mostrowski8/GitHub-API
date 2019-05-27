@@ -5,6 +5,8 @@
 }
 
 .row {
+    justify-content: center;
+    justify-items: center;
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -21,13 +23,21 @@
         display: flex;
         flex-direction: column;
         flex: 5;
+        justify-self: center;
+        margin: 5px;
+        text-align: center;
     }
     .text-right {
         text-align: right;
+        
     }
     .text-left {
         text-align: left;  
-    }
+    } 
+}
+
+.label {
+    font-weight: bolder;
 }
 
 @media all and (max-width: 768px) {
@@ -38,6 +48,9 @@
             }
             .text-left {
                 text-align: center;  
+            }
+            .column-5 {
+                text-align: center;
             }
     }
 }
