@@ -1,13 +1,13 @@
 {
-  "main.css": "/GitHub-API/static/css/main.9fe6ee6f.chunk.css",
-  "main.js": "/GitHub-API/static/js/main.bbdef34a.chunk.js",
-  "main.js.map": "/GitHub-API/static/js/main.bbdef34a.chunk.js.map",
+  "main.css": "/GitHub-API/static/css/main.4b5fa81d.chunk.css",
+  "main.js": "/GitHub-API/static/js/main.05669035.chunk.js",
+  "main.js.map": "/GitHub-API/static/js/main.05669035.chunk.js.map",
   "runtime~main.js": "/GitHub-API/static/js/runtime~main.006ff2e0.js",
   "runtime~main.js.map": "/GitHub-API/static/js/runtime~main.006ff2e0.js.map",
-  "static/js/2.565e988c.chunk.js": "/GitHub-API/static/js/2.565e988c.chunk.js",
-  "static/js/2.565e988c.chunk.js.map": "/GitHub-API/static/js/2.565e988c.chunk.js.map",
+  "static/js/2.4b5577e1.chunk.js": "/GitHub-API/static/js/2.4b5577e1.chunk.js",
+  "static/js/2.4b5577e1.chunk.js.map": "/GitHub-API/static/js/2.4b5577e1.chunk.js.map",
   "index.html": "/GitHub-API/index.html",
-  "precache-manifest.cf995fee3c97c3485798cd3917ad8df4.js": "/GitHub-API/precache-manifest.cf995fee3c97c3485798cd3917ad8df4.js",
+  "precache-manifest.0b65d64ce4801931cae4a693c904dbe5.js": "/GitHub-API/precache-manifest.0b65d64ce4801931cae4a693c904dbe5.js",
   "service-worker.js": "/GitHub-API/service-worker.js",
-  "static/css/main.9fe6ee6f.chunk.css.map": "/GitHub-API/static/css/main.9fe6ee6f.chunk.css.map"
+  "static/css/main.4b5fa81d.chunk.css.map": "/GitHub-API/static/css/main.4b5fa81d.chunk.css.map"
 }
