@@ -1,4 +1,5 @@
 const initialState = {
+    listitems: [],
     errorType: null,
     userRepos: [],
     list: {
@@ -52,11 +53,12 @@ const reducer = (state = initialState, action) => {
                         errorType: null
                     }
                 }
-
+                let listitems = Object.keys(newRepo);
                 return {
                     ...state,
                     userRepos: [...clearRepos, newRepo],
-                    errorType: null
+                    errorType: null,
+                    listitems: listitems
                 }
                 case "SELECT_LIST":
                     return {
