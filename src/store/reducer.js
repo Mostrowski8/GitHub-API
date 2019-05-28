@@ -1,4 +1,6 @@
 const initialState = {
+    value: 0,
+    factorial: null,
     listitems: [],
     errorType: null,
     userRepos: [],
@@ -65,6 +67,23 @@ const reducer = (state = initialState, action) => {
                         ...state,
                         list: {...state.list, [action.payload.index]:action.payload.value}
                     }
+                case "FACTORIAL":
+                    let value = () => {
+                        var rval=1;
+                        for (var i = 2; i <= action.payload; i++)
+                        rval = rval * i;
+                        return rval;
+                    };
+                    let newval = action.payload;
+                    if (action.payload===""){
+                        newval = 0;
+                    }
+                    return {
+                        ...state,
+                        value: newval,
+                        factorial: value()
+                    }
+
                 default:
                     return {
                             ...state

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 const ListCreator = ({selectList, index, listitems}) => {
 
-let listCreatorItems = listitems.map((item)=>{return <option value={item}>{item}</option>});
+let listCreatorItems = listitems.map((item)=>{return <option key={item} value={item}>{item}</option>});
 
     return (
     
