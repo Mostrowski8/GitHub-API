@@ -1,9 +1,8 @@
 import React from 'react';
 import ListCreator from './listcreator/listcreator'
 import './userinput.less';
-import {connect} from 'react-redux';
 
-const Userinput = ({changeUrl, submitUrl, url, selectList, factorial, dispfactorial, value}) => {
+const Userinput = ({changeUrl, submitUrl, url, selectList}) => {
 
     return (
         <div className={"userinput"} >
@@ -18,23 +17,11 @@ const Userinput = ({changeUrl, submitUrl, url, selectList, factorial, dispfactor
             <ListCreator index={3} selectList={selectList}></ListCreator>
             <ListCreator index={4} selectList={selectList}></ListCreator>
             </div>
-            <p>Show factorial for input below</p>
-            <input value={value} onChange={(e)=> dispfactorial(e.target.value)} type="number"></input><p>{factorial!==null && "Factorial is "+factorial}</p>
+           
         </div>
     )
 }
 
-const mapStateToProps = state => {
-    return {
-      factorial: state.factorial,
-      value: state.value
-    }
-  }
-  
-  const mapDispatchToProps = dispatch => {
-    return {
-      dispfactorial: (value)=>dispatch({type:"FACTORIAL", payload:value})
-    }
-  }
 
-export default  connect(mapStateToProps, mapDispatchToProps)(Userinput);
+
+export default  Userinput;
